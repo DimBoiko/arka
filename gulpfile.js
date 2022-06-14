@@ -17,24 +17,24 @@ const ttf2woff2 = require('gulp-ttf2woff2')
 function js(){
 	return src('src/js/script.js')
 	.pipe(dest('dist/js'))
+	.pipe(babel({
+		presets: ['@babel/env']
+	}))
+	.pipe(fileinclude())
+	.pipe(uglify())
 }
 
-// .pipe(babel({
-// 	presets: ['@babel/env']
-// }))
-// .pipe(fileinclude())
-// .pipe(uglify())
+
 
 function html () {
 	return src('src/**.html')
 	.pipe(include({
 		prefix:'@@'
 	}))
-	.pipe(dest('dist'))
-	
-	// .pipe(htmlmin({
-	// 	collapseWhitespace:true
-	// 
+	.pipe(dest('dist'))	
+	.pipe(htmlmin({
+		collapseWhitespace:true,
+	}))
 }
 
 function scss () {
