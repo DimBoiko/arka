@@ -1,0 +1,19 @@
+@import './reset';
+@import './fonts';
+@import './vars';
+@import './footer';
+@import './header';
+@import './main';
+@import './templates';
+@import './products';
+@import './process';
+@import './advantage';
+@import './reviews';
+@import './burger';
+@import './modal';
+
+body{
+	scroll-behavior: smooth;
+	background-color: #eee;
+	font-family: 'Roboto', sans-serif;
+}

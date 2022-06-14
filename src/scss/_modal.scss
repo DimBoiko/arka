@@ -1,0 +1,85 @@
+.nav-modal{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background:rgba($color: $gray-bg, $alpha: 0.6) ;
+	z-index: 1;
+
+	display: none;
+	align-items: center;
+	justify-content: center;
+	&__body {
+		position: relative;
+		background-color: white;
+		padding: 50px;
+	}
+
+	&__close{
+		position: absolute;
+		right: 25px;
+		top: 5px;
+		font-size: 36px;
+	}
+
+
+	&__nav-list {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 20px;
+		font-size: 26px;
+		color: $blue;
+	}
+	&__nav-list-link{
+		position: relative;
+	}
+	&__nav-list-link::before{
+		content: '';
+		display: block;
+		position: absolute;
+		width: 0%;
+		left: 50%;
+		bottom: 0px;
+		height: 1px;
+		background-color: $blue;
+		transition: all 0.3s ease; 
+	}
+	&__nav-list-link:hover::before{
+		content: '';
+		display: block;
+		position: absolute;
+		bottom: 0px;
+		left: 0%;
+		width: 100%;
+		height: 1px;
+		background-color: $blue;
+	}
+	&__nav-list-link::after{
+		content: '';
+		display: block;
+		position: absolute;
+		left: 50%;
+		bottom: 0px;
+		width: 0%;
+		height: 1px;
+		background-color: $blue;
+		transition: all 0.3s ease; 
+	}
+	&__nav-list-link:hover::after{
+		content: '';
+		display: block;
+		position: absolute;
+		left: 50%;
+		width: 50%;
+		height: 1px;
+		background-color: $blue;
+	}
+	&__nav-list-link {
+	}
+}
+
+.show-nav{
+	display: flex;
+}

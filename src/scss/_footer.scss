@@ -1,0 +1,81 @@
+.footer {
+	background-color: #F2F3F4;
+	min-height: 365px;
+	@media (max-width:345px) {
+		display: none;
+	}
+	&__row {
+		padding-top: 60px;
+		width: 100%;
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		li{
+			margin-bottom: 15px;
+		}
+		img{
+			@media (max-width:690px) {
+				display: none;
+			}
+		}
+	}
+	&__colum-form{
+		display: flex;
+		flex-direction: column;
+		gap: 13px;
+		span{
+			color: $blue-light;
+			@media (max-width:445px) {
+				font-size: 15px;
+			}
+		}
+		input{
+			border: none;
+			outline: none;
+			border-radius: 34px;
+			height: 36px;
+			width: 280px;
+			padding-left: 18px;
+			@media (max-width:690px) {
+				width: 200px;
+			}
+			@media (max-width:650px) {
+				width: 160px;
+			}
+			@media (max-width:445px) {
+				width: 120px;
+			}
+		}
+		button{
+			@media (max-width:690px) {
+				font-size: 14px;
+			}
+			@media (max-width:445px) {
+				font-size: 10px;
+			}
+		}
+		input::placeholder{
+			color: rgba(61, 86, 117, 0.4);
+			font-style:italic;
+			@media (max-width:445px) {
+				font-size: 12px;
+			}
+		}
+	}
+	&__colum {
+		color: $blue-light;
+		font-size: 15px;
+		@media (max-width:690px) {
+			font-size: 12px;
+		}
+	}
+
+	&__link {
+	}
+
+	&__colum-social {
+		display: flex;
+		gap: 10px;
+	}
+}
+
